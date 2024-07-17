@@ -1,4 +1,6 @@
-import './pages/index.css'; 
+import './pages/index.css';
+import {initialCards} from './scripts/cards.js'; //не нужно?
+
 
 // @todo: Темплейт карточки
 const cardTemplate = document.querySelector('#card-template').content;
@@ -29,6 +31,7 @@ function deleteCard(event) {
 
 initialCards.forEach(function (item)
 {
-    card = createCard(item.link, item.name, deleteCard);
+    const card = createCard(item.link, item.name, deleteCard);
     cardsField.append(card);
 });
+
